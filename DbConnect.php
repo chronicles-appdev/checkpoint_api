@@ -9,9 +9,9 @@ class DbConnect
     private $server = 'localhost';
 
 
-    private $dbname = 'chronicl_dm2015';
-    private $user = 'chronicl';
-    private $pass = '101calvary101';
+    private $dbname = 'ulearnlm_checkpoint';
+    private $user = 'ulearnlm_ali';
+    private $pass = 'FuTa@(2017)';
     //  private $user = 'root';
     //  private $pass = '';
 
