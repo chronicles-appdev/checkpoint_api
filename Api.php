@@ -177,17 +177,17 @@ class  Api extends Rest
     public function updateOptions()
     {
 
-        $marking_id = $this->validateParameter('marking_id', $this->param['marking_id'], STRING, false);
         $answer = $this->validateParameter('answer', $this->param['answer'], STRING, false);
+        $test_id = $this->validateParameter('test_id', $this->param['test_id'], STRING, false);
 
 
         $query = new Query;
         try {
 
-            $quer = $query->get_single('marking', array('id' => $marking_id), 'id', 'asc');
+            $quer = $query->get_single('marking', array('id' => $test_id), 'id', 'asc');
             $correct_opt = $quer->correct_option;
             $tt_id = $quer->test_taken_id;
-            $results = $query->update('marking', 'id', $marking_id, array('selected_option' => $answer));
+            $results = $query->update('marking', 'id', $test_id, array('selected_option' => $answer));
 
             if ($answer == $correct_opt) {
                 $results = $query->correct_update($tt_id);
