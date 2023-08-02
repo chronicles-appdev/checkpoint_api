@@ -214,6 +214,7 @@ class  Api extends Rest
 
 
         $query = new Query;
+        
         try {
 
             $results = $query->get_question_s($tt_id);
